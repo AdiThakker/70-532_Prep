@@ -9,6 +9,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "VMs", "VMs", "{5F265669-B17
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Storage", "Storage", "{DDA86B30-FF3E-4B11-9C40-E083F5FDEAE6}"
+	ProjectSection(SolutionItems) = preProject
+		Storage\Storage_Script.ps1 = Storage\Storage_Script.ps1
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
