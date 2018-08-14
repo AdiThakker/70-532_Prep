@@ -45,3 +45,7 @@ az storage message delete --id "ec947d7c-7d29-4c46-bd00-072921fc33e2" --pop-rece
 # Create table
 $TableName="myTable"
 az storage table create -n $TableName --connection-string $ConnectionString
+
+
+# Delete resource group
+az group delete -n $ResourceGroupName --yes
