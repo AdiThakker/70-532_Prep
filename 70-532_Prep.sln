@@ -13,14 +13,18 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Storage", "Storage", "{DDA8
 		Storage\Storage_Script.ps1 = Storage\Storage_Script.ps1
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CosmosDB", "CosmosDB", "{D9A6A4BC-8EC7-406B-81EE-BF8EFD2EF7D4}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmosDbApp", "CosmosDbApp\CosmosDbApp.csproj", "{9C49A3F8-5545-44D2-942A-13626AA975D6}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AppServices", "AppServices", "{CB166865-1B5D-46D9-A4FE-1BD575F582D7}"
 	ProjectSection(SolutionItems) = preProject
 		AppServices\App_Script.ps1 = AppServices\App_Script.ps1
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Redis", "Redis", "{85C8D17B-0044-4127-8D3C-7CF51CB70102}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CosmosDbApp", "Storage\CosmosDbApp\CosmosDbApp.csproj", "{92F79C2D-5AA0-449D-92CE-E1CC578361AD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CosmosDB", "CosmosDB", "{A0001770-AF50-4492-A6D1-F9F93714DE4A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedisCacheApp", "Storage\RedisCacheApp\RedisCacheApp.csproj", "{451F430E-1784-4F88-8191-9F995BAC325C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -28,17 +32,23 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9C49A3F8-5545-44D2-942A-13626AA975D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9C49A3F8-5545-44D2-942A-13626AA975D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9C49A3F8-5545-44D2-942A-13626AA975D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9C49A3F8-5545-44D2-942A-13626AA975D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92F79C2D-5AA0-449D-92CE-E1CC578361AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92F79C2D-5AA0-449D-92CE-E1CC578361AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92F79C2D-5AA0-449D-92CE-E1CC578361AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92F79C2D-5AA0-449D-92CE-E1CC578361AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{451F430E-1784-4F88-8191-9F995BAC325C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{451F430E-1784-4F88-8191-9F995BAC325C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{451F430E-1784-4F88-8191-9F995BAC325C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{451F430E-1784-4F88-8191-9F995BAC325C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{D9A6A4BC-8EC7-406B-81EE-BF8EFD2EF7D4} = {DDA86B30-FF3E-4B11-9C40-E083F5FDEAE6}
-		{9C49A3F8-5545-44D2-942A-13626AA975D6} = {D9A6A4BC-8EC7-406B-81EE-BF8EFD2EF7D4}
+		{85C8D17B-0044-4127-8D3C-7CF51CB70102} = {DDA86B30-FF3E-4B11-9C40-E083F5FDEAE6}
+		{92F79C2D-5AA0-449D-92CE-E1CC578361AD} = {A0001770-AF50-4492-A6D1-F9F93714DE4A}
+		{A0001770-AF50-4492-A6D1-F9F93714DE4A} = {DDA86B30-FF3E-4B11-9C40-E083F5FDEAE6}
+		{451F430E-1784-4F88-8191-9F995BAC325C} = {85C8D17B-0044-4127-8D3C-7CF51CB70102}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CCAB780D-A79D-4DAA-AC80-A2821147E45B}
