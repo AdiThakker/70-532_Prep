@@ -27,7 +27,25 @@ namespace RedisCacheApp
 
             ManageKeys();
 
+            // Transactions
+            ManageTransactions();
+
             Console.ReadKey();
+        }
+
+        private static void ManageTransactions()
+        {
+            var cache = Connection.GetDatabase();
+            var transaction = cache.CreateTransaction();
+
+            var withdraw = cache.StringDecrementAsync("Withdraw", -100);
+            var deposit = cache.StringIncrementAsync("Deposit", 100);
+
+            bool result = transaction.Execute();
+
+            Console.WriteLine(withdraw.Result);
+            Console.WriteLine(deposit.Result);
+            
         }
 
         public static ConnectionMultiplexer Connection
