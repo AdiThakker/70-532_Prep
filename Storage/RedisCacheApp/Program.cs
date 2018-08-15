@@ -2,6 +2,7 @@
 using StackExchange.Redis;
 using System;
 using System.IO;
+using System.Threading;
 
 namespace RedisCacheApp
 {
@@ -42,13 +43,20 @@ namespace RedisCacheApp
             string key = "Name";
 
             // Store key
-            Connection.GetDatabase().StringSet(key, "John Doe");
+            var db = Connection.GetDatabase();
+            db.StringSet(key, "John Doe");
 
             // Retrieve
-            Console.WriteLine(Connection.GetDatabase().StringGet(key));
+            Console.WriteLine(db.StringGet(key));
 
             // Delete
-            Connection.GetDatabase().KeyDelete(key);
+            db.KeyDelete(key);
+
+            // Set Key with Expiry
+            db.StringSet(key, "John Doe", TimeSpan.FromSeconds(3));
+            Thread.Sleep(4000);
+
+            Console.WriteLine(db.StringGet(key));
 
         }
     }
