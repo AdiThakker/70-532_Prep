@@ -38,7 +38,7 @@ namespace RedisCacheApp
             var cache = Connection.GetDatabase();
             var transaction = cache.CreateTransaction();
 
-            var withdraw = cache.StringDecrementAsync("Withdraw", -100);
+            var withdraw = cache.StringDecrementAsync("Withdraw", 100);
             var deposit = cache.StringIncrementAsync("Deposit", 100);
 
             bool result = transaction.Execute();
