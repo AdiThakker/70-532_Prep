@@ -5,6 +5,7 @@ VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "VMs", "VMs", "{5F265669-B17B-4F0B-A70B-84FEB6FDC1A2}"
 	ProjectSection(SolutionItems) = preProject
+		VMs\VM_Create 2.ps1 = VMs\VM_Create 2.ps1
 		VMs\VM_Create.ps1 = VMs\VM_Create.ps1
 	EndProjectSection
 EndProject
@@ -39,9 +40,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Containers", "Containers", 
 		AppServices\Containers\Container_Script.ps1 = AppServices\Containers\Container_Script.ps1
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp", "AppServices\Containers\WebApp\WebApp.csproj", "{F615FCE9-F8E0-4AEE-A15B-99ED9988ADAD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApp", "AppServices\Containers\WebApp\WebApp.csproj", "{F615FCE9-F8E0-4AEE-A15B-99ED9988ADAD}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{DB21F95F-6F01-4FCB-A6A4-8E96E1B70CF9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Azure", "Azure", "{FF884C04-23DF-4F6A-B61D-ABCBC3519799}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureStorageApp", "Storage\AzureStorageApp\AzureStorageApp.csproj", "{335BD1EC-41B0-487F-AE94-2F36A55F5EB8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -73,6 +78,10 @@ Global
 		{DB21F95F-6F01-4FCB-A6A4-8E96E1B70CF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB21F95F-6F01-4FCB-A6A4-8E96E1B70CF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB21F95F-6F01-4FCB-A6A4-8E96E1B70CF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{335BD1EC-41B0-487F-AE94-2F36A55F5EB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{335BD1EC-41B0-487F-AE94-2F36A55F5EB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{335BD1EC-41B0-487F-AE94-2F36A55F5EB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{335BD1EC-41B0-487F-AE94-2F36A55F5EB8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -88,6 +97,8 @@ Global
 		{11FE0539-5D29-4851-95F0-C79DDF479857} = {62F12FE5-B447-42C2-9267-B6180AFBC9D9}
 		{63FAC2E8-CDCD-40C1-BB31-007A6EDDBD6F} = {CB166865-1B5D-46D9-A4FE-1BD575F582D7}
 		{F615FCE9-F8E0-4AEE-A15B-99ED9988ADAD} = {63FAC2E8-CDCD-40C1-BB31-007A6EDDBD6F}
+		{FF884C04-23DF-4F6A-B61D-ABCBC3519799} = {DDA86B30-FF3E-4B11-9C40-E083F5FDEAE6}
+		{335BD1EC-41B0-487F-AE94-2F36A55F5EB8} = {FF884C04-23DF-4F6A-B61D-ABCBC3519799}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CCAB780D-A79D-4DAA-AC80-A2821147E45B}
