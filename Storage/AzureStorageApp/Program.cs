@@ -19,20 +19,21 @@ namespace AzureStorageApp
             Console.WriteLine(GetConnectionString());
 
             // Queue 
-            //if (!QueueOperations("532squeue").Result)
-            //    return;
+            if (!QueueOperations("532squeue").Result)
+                return;
 
             // Table
-            //if (!TableOperations("Customers").Result)
-            //    return;
+            if (!TableOperations("Customers").Result)
+                return;
 
             // Blob
-            //if (!BlobOperations("files").Result)
-            //    return;
+            if (!BlobOperations("files").Result)
+                return;
 
             // File
             if (!FileOperations("files").Result)
                 return;
+
             Console.ReadKey();
         }
 
